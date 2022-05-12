@@ -1,0 +1,569 @@
+.main
+    padding-top: 72px
+    &__inner
+        padding-top: 50px
+        display: flex
+        flex-direction: column
+.breadcrum
+    display: flex
+    margin-bottom: 13px
+    &-item
+        display: block
+
+        font-family: "Roboto", sans-serif
+        font-style: normal
+        font-weight: 400
+        font-size: 14px
+        line-height: 16px
+        color: #52575F
+        letter-spacing: 0.25px
+        &:not(:last-child)
+            margin-right: 16px
+.title-block
+    display: flex
+    margin-bottom: 24px
+    .title
+        margin-right: 9px
+
+        font-style: normal
+        font-weight: 700
+        font-size: 36px
+        line-height: 40px
+        color: $Gray
+    .count
+        font-style: normal
+        font-weight: 400
+        font-size: 10px
+        line-height: 27px
+        letter-spacing: 1px
+        color: $NotActive
+.tags
+    display: flex
+    align-items: center
+    margin-bottom: 43px
+    margin-right: -64px
+    padding-right: 64px
+
+    overflow-x: auto
+.tag
+    @include Tag
+    white-space: nowrap
+
+    transition: 0.3s
+
+    cursor: pointer
+    &:not(:last-child)
+        margin-right: 8px
+    &:hover
+        @include Tag-Hover
+    &:active
+        @include Tag-Click
+.settings
+    &-block
+        margin-bottom: 22px
+        & .sorter-button
+            padding: 0
+
+            font-weight: 400
+            font-size: 16px
+            line-height: 32px
+            color: $Gray
+
+            transition: 0.3s
+
+            background-color: $White
+            border: none
+            &:not(:last-child)
+                margin-right: 21px
+            &_status_active
+                color: $Active
+        & .filter-button
+            padding: 0
+            padding-left: 25px
+
+            font-weight: 500
+            font-size: 16px
+            line-height: 32px
+            color: $Gray
+
+            background-color: $White
+            border: none
+            background-image: url(../assets/images/Icon-Filter.svg)
+            background-repeat: no-repeat
+            background-position: left center
+            &_status_active
+                color: $Active
+                background-image: url(../assets/images/Icon-Filter_status_active.svg)
+    &_type_desktop
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &_type_mobile
+        display: none
+        align-items: center
+        justify-content: space-between
+        & .sorter-button
+            padding-left: 20px
+
+            background-image: url(../assets/images/Icon-Sorter.svg)
+            background-repeat: no-repeat
+            background-position: left center
+        & .filter-button
+            font-weight: 400
+        & .sorter-modal
+            position: fixed
+            top: 0
+            right: 0
+            bottom: 0
+            left: 0
+            z-index: 1000
+
+            display: none
+            &_status_active
+                display: flex
+.sorter-modal
+    &__inner
+        height: 100%
+        width: 100%
+        display: flex
+        align-items: center
+
+        background-color: rgba(0, 0, 0, 0.2)
+    & .sorter-list
+        margin-left: 16px
+        padding: 16px 0
+        width: 230px
+
+        background-color: $White
+        border: 1px solid #CFD4DA
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.05)
+        border-radius: 10px
+    & .sorter-item
+        height: 40px
+        padding: 0 24px
+        display: flex
+        align-items: center
+
+        cursor: pointer
+        &:hover
+            background-color: #F4F7FD
+            color: $Active
+        &_status_active
+            font-weight: 700
+
+            background-image: url(../assets/images/Icon-Check.svg)
+            background-repeat: no-repeat
+            background-position: right 24px center
+            background-color: $White !important
+            color: $Black !important
+
+.layout
+    display: flex
+.cards-wrapper
+    width: 100%
+.cards
+    width: 100%
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    grid-gap: $Step_s
+    margin-bottom: $Step_s
+.card
+    &__image-block
+        position: relative
+
+        height: 248px
+    &__image
+        height: 100%
+        width: 100%
+        object-fit: cover
+    &__tag_type_new
+        position: absolute
+        top: 8px
+        left: 8px
+        
+        padding: 4px 8px
+
+        font-family: 'Roboto', sans-serif
+        font-style: normal
+        font-weight: 700
+        font-size: 12px
+        line-height: 16px
+        letter-spacing: 0.03em
+        text-transform: uppercase
+        color: $White
+
+        background-color: #2CBC63
+        border-radius: 5px
+    &__slider-block
+        position: relative
+
+        height: 100%
+        width: 100%
+        & .slider
+            position: absolute
+            top: 0
+            right: 0
+            bottom: 0
+            left: 0
+        & .slide
+            display: none
+            height: 100%
+            width: 100%
+            object-fit: cover
+            &_status_active
+                display: block
+        & .sectors
+            position: absolute
+            top: 0
+            right: 0
+            bottom: 0
+            left: 0
+
+            display: flex
+            & .sector
+                flex-grow: 1
+                
+
+        & .pagination
+            position: absolute
+            bottom: 16px
+            left: 16px
+
+            display: flex
+            flex-direction: row
+            align-items: center
+        & .pagination-item
+            width: 8px
+            height: 8px
+
+            border-radius: 50%
+            background-color: $White
+            opacity: .5
+            &:not(:last-child)
+                margin-right: 8px
+            &:nth-child(5)
+                width: 6px
+                height: 6px
+            &:nth-child(6)
+                width: 4px
+                height: 4px   
+            &_status_active
+                opacity: 1
+                width: 8px !important
+                height: 8px !important
+    &__info-block
+        position: absolute
+        bottom: 12px
+        right: 16px
+
+        display: flex
+    &__comment-block
+        display: flex
+        align-items: center
+        margin-right: 9px
+    &__comment-icon
+        width: 16px
+        height: 16px
+        margin-right: 4px
+
+        background-color: transparent
+        border: none
+        background-image: url(../assets/images/Icon-Card-Comment.svg)
+        background-repeat: no-repeat
+        background-position: center
+        
+    &__comment-count
+        font-style: normal
+        font-weight: 700
+        font-size: 12px
+        line-height: 16px
+        color: $White
+    &__favourite-block
+        display: flex
+        align-items: center
+    &__favourite-icon
+        width: 16px
+        height: 16px
+        margin-right: 4px
+
+        background-color: transparent
+        border: none
+        background-image: url(../assets/images/Icon-Card-Favourite.svg)
+        background-repeat: no-repeat
+        background-position: center
+    &__favourite-count
+        font-style: normal
+        font-weight: 700
+        font-size: 12px
+        line-height: 16px
+        color: $White
+    &__description-block
+        padding: 16px 0 24px
+        display: flex
+        flex-direction: column
+        & .description
+            font-style: normal
+            font-weight: 500
+            font-size: 14px
+            line-height: 24px
+            color: $Black
+        & .location
+            font-style: normal
+            font-weight: 400
+            font-size: 14px
+            line-height: 24px
+            color: $Gray
+        & .company
+            font-style: normal
+            font-weight: 400
+            font-size: 14px
+            line-height: 24px
+            color: $Gray
+.filters
+    display: none
+    width: 240px
+    padding-top: 26px
+    padding-bottom: 24px
+    flex-shrink: 0
+    margin-left: $Step_l
+
+    background-color: $White
+    &_status_active
+        display: flex
+        flex-direction: column
+    details[open] .filter-title
+        background-image: url(../assets/images/Icon-Arrow-Top.svg)
+        margin-bottom: 13px
+    details .filter-title
+        background-image: url(../assets/images/Icon-Arrow-Bottom.svg)
+    &__header
+        display: none
+        align-items: center
+        justify-content: space-between
+        margin-bottom: 24px
+        & .filters-button-close
+            display: flex
+            width: 16px
+            height: 16px
+
+            background-color: $White
+            border: none
+            background-image: url(../assets/images/Icon-Filters-Close.svg)
+            background-repeat: no-repeat
+            background-position: center center
+        & span
+            font-weight: 400
+            font-size: 16px
+            line-height: 24px
+            color: $Gray
+    &-reset-button
+        @include Filters-Reset-Button
+details.filter
+    flex-direction: column
+.filter
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    &:not(:last-child)
+        margin-bottom: $Step_s
+    & .filter-title
+        font-weight: 700
+        font-size: 15px
+        line-height: 32px
+        text-transform: uppercase
+        color: $Gray
+
+        background-repeat: no-repeat
+        background-position: right center
+
+        cursor: pointer
+    & .filter-title-count
+        padding-left: 8px
+        display: inline-block
+
+        font-weight: 400
+        font-size: 15px
+        line-height: 32px
+        text-transform: uppercase
+        color: #AFB3BB
+    & .filter-items
+        height: calc( 5 * 40px )
+        overflow-y: auto
+    & .filter-items-more
+        display: none
+
+        font-weight: 400
+        font-size: 14px
+        line-height: 24px
+        color: $Active
+
+        background-color: $White
+        border: none
+        outline: none
+        padding: 0
+        &_status_active
+            display: flex
+            
+    & .search-field
+        display: flex
+        align-items: center
+        padding: 0 10px
+        margin-bottom: $Step_s
+        height: 40px
+        width: 100%
+
+        background-color: $White
+        border: 1px solid #CFD4DA
+        border-radius: 5px
+
+        font-weight: 500
+        font-size: 14px
+        line-height: 24px
+        color: $Gray
+        outline: none
+        & input::placeholder
+            color: $NotActive
+    & .checkbox-field
+        border-radius: 10px
+        padding: 8px
+        display: flex
+        align-items: center
+
+        font-weight: 500
+        font-size: 16px
+        line-height: 24px
+        color: $Gray
+
+        transition: 0.3s
+
+        cursor: pointer
+        &:hover
+            background-color: #F4F7FD
+            color: $Active !important
+        &_status_disabled
+            color: $NotActive !important
+            background-color: $White !important
+
+            cursor: default
+            &:hover
+                color: $NotActive !important
+            & input
+                cursor: default !important
+            & label
+                cursor: default !important
+            & .pseudo-checkbox
+                cursor: default !important
+
+        & input        
+            outline: none
+            appearance: none
+            &:checked + .pseudo-checkbox
+                background-color: $Active
+                border: 1px solid $Active
+                background-image: url(../assets/images/Icon-Check_color_white.svg)
+                background-repeat: no-repeat
+                background-position: center center
+                
+        & .pseudo-checkbox
+                content: ""
+                position: absolute
+                left: 0
+                top: 0
+
+                width: 24px
+                height: 24px
+                background-color: #FFFFFF
+                border: 1px solid #CFD4DA
+                border-radius: 5px
+
+                cursor: pointer
+        & label
+            position: relative
+
+            padding-left: 32px
+            height: 100%
+            width: 100%
+            display: flex
+            align-items: center          
+
+            cursor: pointer
+    & .switcher-field
+        position: relative
+
+        display: inline-block
+        width: 42px
+        height: 24px
+        margin: 0
+
+        background-color: $NotActive
+        border: none
+        border-radius: 30px
+        outline: none
+        appearance: none
+
+        transition: 0.3s
+
+        cursor: pointer
+        &::after 
+            content: ""
+
+            display: inline-block
+            position: absolute
+            left: 3px
+            top: 3px
+
+            width: 18px
+            height: 18px
+            background-color: $White
+            border-radius: 50%
+
+            transform: translateX(0)
+            transition: 0.3s
+
+            cursor: pointer
+        &:checked::after 
+            transform: translateX(calc(100%))
+        &:checked 
+            background-color: $Active
+.pagination
+    display: flex
+    flex-direction: column
+    &__page-more
+        @include Pagination-Page-More
+        margin-bottom: 24px
+        &:hover
+            @include Pagination-Page-More-Hover
+    &__pages
+        & .paginationjs-pages ul
+            // width: 488px
+            display: flex
+            align-items: center
+            justify-content: center
+        & .paginationjs-ellipsis, .paginationjs-page
+            width: 40px
+            height: 40px
+            display: flex
+            align-items: center
+            justify-content: center
+
+            font-weight: 500
+            font-size: 16px
+            line-height: 24px
+            color: $Gray
+
+            border-radius: 50%
+            background-color: $White
+            &_status_active
+                color: $White
+
+                background-color: $Active
+    &-item
+        width: 40px
+        height: 40px
+        background-color: $Active
+        border-radius: 50%
+        &_status_active
+            background-color: $Active
+        &:not(:last-child)
+            margin-right: $Step_m

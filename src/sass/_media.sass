@@ -1,0 +1,107 @@
+@media (max-width: 1399.98px)
+    .cards
+        grid-template-columns: repeat(3, 1fr)
+// @media (max-width: 1199.98px)
+@media (max-width: 991.98px)
+    .container
+        margin: 0 $Step_m
+    .tags
+        margin-right: -32px
+        padding-right: 32px
+    .cards
+        grid-template-columns: repeat(2, 1fr)
+    .filters
+        margin-left: 32px
+@media (max-width: 767.98px)
+    .header
+        position: sticky
+        z-index: 999
+        &__inner
+            height: 56px
+        &__nav
+            display: none
+    #order-button
+        display: none
+    #entry-button
+        display: none
+    .mobile-nav-button
+        display: flex
+    .main
+        padding-top: 0
+    .settings_type_desktop
+        display: none
+    .settings_type_mobile
+        display: flex
+    .filters
+        position: fixed
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        z-index: 1999
+
+        margin-left: 0
+        width: 100%
+        padding: 0 $Step_m
+
+        overflow-y: auto
+        &__header
+            position: sticky
+            top: 0
+            left: 0
+            right: 0
+            z-index: 1999
+
+            height: 55px
+            display: flex
+
+            background-color: $White
+            &::after
+                position: absolute
+                bottom: 0
+                left: -32px
+                right: -32px
+
+                content: ""
+                height: 1px
+
+                background-color: rgba(207, 212, 218, 0.5 )
+@media (max-width: 575.98px)
+    .container
+        margin: 0 $Step_s
+    .header__buttons button:not(:last-child)
+        margin-right: $Step_s
+    .main__inner
+        padding-top: 28px
+    .breadcrum
+        margin-bottom: 4px
+        &-item
+            font-size: 12px
+    .title-block
+        margin-bottom: 16px
+        .title
+            font-size: 24px
+            line-height: 32px
+    .tags
+        margin-bottom: 20px
+    .tag
+        @include Tag-Mobile
+        &:not(:last-child)
+            margin-right: 4px
+    .cards
+        grid-template-columns: 1fr
+        grid-gap: 0
+    .card
+        &__image-block
+            margin-left: -16px
+            margin-right: -16px
+    .filters
+        padding: $Step_s
+        padding-top: 0
+        &__header
+            &::after
+                left: -16px
+                right: -16px
+    .tags
+        margin-right: -16px
+        padding-right: 16px

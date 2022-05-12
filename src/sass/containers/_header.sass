@@ -1,0 +1,179 @@
+.header
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+
+    background-color: $White
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.05)
+    &__inner
+        display: flex
+        align-items: center
+        height: 72px
+    &__logo
+        padding-right: 50px
+        display: flex
+        flex-shrink: 0
+    &__nav-list
+        display: flex
+        .nav-item-link
+            padding: $Step_xs $Step_s
+    &__nav-item
+        &_type_select
+            padding: 0 !important
+
+            position: relative
+            & ul
+                position: absolute
+                top: 40px
+                left: -16px
+
+                display: none
+                flex-direction: column
+
+                background-color: $White
+            &.nav-item_status_active ul
+                display: flex
+    &__buttons
+        display: flex
+        flex-shrink: 0
+        align-items: center
+        margin-left: auto
+        & button:not(:last-child)
+            margin-right: 24px
+    &__button
+        transition: 0.3s
+    &__icon
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 24px
+        height: 24px
+
+        border: none
+        background-color: $White
+        &-wrapper
+            position: relative
+        &:hover + .hint
+            display: block
+        &-count
+            position: absolute
+            top: -8px
+
+            padding: 6px
+            height: 22px
+            display: none
+            align-items: center
+            justify-content: center
+
+            font-weight: 600
+            font-size: 11px
+            line-height: 8px
+            color: #FFFFFF
+
+            background-color: #DB052C
+            border: 2px solid #FFFFFF
+            border-radius: 12px
+            &_status_active
+                display: flex
+.hint
+    position: absolute
+    top: 32px
+    left: 2px
+
+    display: none
+    padding: 4px 12px
+
+    font-weight: 500
+    font-size: 14px
+    line-height: 24px
+
+    background-color: $Gray
+    border-radius: 5px
+    color: $White
+#notification-icon
+    background-image: url("../assets/images/Icon-Notification.svg")
+    background-repeat: no-repeat
+    background-position: center center
+    & ~ .header__icon-count
+        left: 10px
+
+#favourite-icon
+    background-image: url("../assets/images/Icon-Favourite.svg")
+    background-repeat: no-repeat
+    background-position: center center
+    & ~ .header__icon-count
+        left: 15px
+#entry-button
+    margin-right: 0
+.mobile-nav
+    display: none
+    &-list
+        padding-top: 25px
+        flex-direction: column
+    &_status_active
+        position: fixed
+        top: 56px
+        right: 0
+        bottom: 0
+        left: 0
+        z-index: 999
+
+        display: flex
+        flex-direction: column
+
+        background-color: $White
+        border-top: 1px solid rgba(207, 212, 218, 0.5 )
+
+        overflow-y: auto
+    & .nav-item
+        height: 48px
+        display: flex
+        align-items: center
+        padding-left: $Step_s
+
+        font-size: 15px
+
+        border-bottom: 1px solid rgba(207, 212, 218, 0.5 )
+        background-image: url(../assets/images/Icon-Arrow-Right.svg)
+        background-repeat: no-repeat
+        background-position: right 8px center
+.mobile-nav-button
+    display: none
+    width: 24px
+    height: 24px
+
+    background-image: url(../assets/images/Icon-Gamburger.svg)
+    background-repeat: no-repeat
+    background-position: center center
+    border: none
+    background-color: $White
+    &_status_active
+        background-image: url(../assets/images/Icon-Menu-close.svg)
+.nav-item
+    @include Nav-item
+
+    display: flex
+    align-items: center
+    flex-wrap: nowrap
+
+    white-space: nowrap
+
+    cursor: pointer
+    & > a
+        color: inherit
+    &_status_active
+        color: $Active !important
+        & > a
+            color: $Active !important
+    &_type_select
+        padding: 8px !important
+        padding-right: 28px !important
+
+        background-image: url(../assets/images/Icon-Select.svg)
+        background-repeat: no-repeat
+        background-position: right 8px center
+        &.nav-item_status_active
+            background-image: url(../assets/images/Icon-Select_status_active.svg)
+    &_status_inactive
+        color: $NotActive

@@ -1,0 +1,204 @@
+[
+    {
+        "id": 1,
+        "description":["Сауна","34 м2","EOS"],
+        "location": ["Москва", "квартира"],
+        "company": "Твой пар",
+        "images": ["image_20", "image_24", "image_14"],
+        "comment": 1,
+        "favourite": 256,
+        "price": 20000,
+        "new": true,
+        "steamGenerator": true
+    }, 
+    {
+        "id": 2,
+        "description":["Сауна","65 м2","Harvia"],
+        "location": ["Королев", "дом"],
+        "company": "95 градусов",
+        "images": ["image_24", "image_20", "image_24", "image_14"],
+        "comment": 0,
+        "favourite": 1,
+        "price": 40000,
+        "steamGenerator": true
+    },
+    {
+        "id": 3,
+        "description":["Сауна","65 м2","Harvia", "от 1 400 000 ₽"],
+        "location": ["Москва", "квартира"],
+        "company": "95 градусов",
+        "images": ["image_14", "image_24", "image_20", "image_24", "image_14", "image_20"],
+        "comment": 0,
+        "favourite": 0,
+        "price": 1700000
+    },
+    {
+        "id": 4,
+        "description":["Сауна","65 м2","Harvia Cillindro"],
+        "location": ["Москва", "квартира"],
+        "company": "Контакт Плюс",
+        "images": ["image_12"],
+        "comment": 0,
+        "favourite": 34,
+        "price": 35000
+    },
+    {
+        "id": 5,
+        "description":["Сауна","34 м2","IKI", "амбарная доска"],
+        "location": ["Москва", "квартира"],
+        "company": "Контакт Плюс",
+        "images": ["image_29"],
+        "comment": 0,
+        "favourite": 0,
+        "price": 15000,
+        "new": true
+    },
+    {
+        "id": 6,
+        "description":["Сауна","11 м2","Helo Pikkutonttu"],
+        "location": ["КП «Нахабино Кантри»", "дом"],
+        "company": "95 градусов",
+        "images": ["image_40", "image_24", "image_20", "image_24", "image_14", "image_20"],
+        "comment": 2,
+        "favourite": 134,
+        "price": 5000
+    },
+    {
+        "id": 7,
+        "description":["SPA-зона","2000 м2","Klafs"],
+        "location": ["Москва", "Barvikha Hotel & SPA"],
+        "company": "ASPA",
+        "images": ["image_30"],
+        "comment": 0,
+        "favourite": 0,
+        "price": 100000
+    },
+    {
+        "id": 8,
+        "description":["SPA-зона","2000 м2","Klafs"],
+        "location": ["Москва", "Barvikha Hotel & SPA"],
+        "images": ["image_28"],
+        "comment": 2,
+        "favourite": 134,
+        "price": 200000
+    },
+    {
+        "id": 9,
+        "description":["Травяная сауна","34 м2","Lang Sauna-Therm"],
+        "location": ["Москва", "Termoland"],
+        "company": "Контакт Плюс",
+        "images": ["image_35", "image_24", "image_20", "image_24", "image_14", "image_20"],
+        "comment": 1,
+        "favourite": 256,
+        "price": 19000
+    },
+    {
+        "id": 10,
+        "description":["Гималайская сауна","IKI Pro"],
+        "location": ["Москва", "Termoland"],
+        "company": "Контакт Плюс",
+        "images": ["image_37", "image_24", "image_14", "image_20"],
+        "comment": 0,
+        "favourite": 1,
+        "price": 7000
+    },
+    {
+        "id": 11,
+        "description":["Сауна","65 м2","Helo Saunatonttu", "1 400 000 ₽"],
+        "location": ["Москва", "Termoland"],
+        "company": "Контакт Плюс",
+        "images": ["image_38", "image_24", "image_20", "image_24", "image_14", "image_20"],
+        "comment": 2,
+        "favourite": 134,
+        "price": 36000
+    },
+    {
+        "id": 12,
+        "description":["Нефритовая сауна","IKI"],
+        "location": ["Москва", "Termoland"],
+        "company": "Контакт Плюс",
+        "images": ["image_39", "image_24", "image_20", "image_24"],
+        "comment": 0,
+        "favourite": 0,
+        "price": 200000
+    },
+    {
+        "id": 13,
+        "description":["Сауна","34 м2","IKI","амбарная доска"],
+        "location": ["Москва", "квартира"],
+        "company": "Контакт Плюс",
+        "images": ["image_45"],
+        "comment": 0,
+        "favourite": 0,
+        "price": 30000
+    },
+    {
+        "id": 14,
+        "description":["Сауна","11 м2","Helo Pikkutonttu"],
+        "location": ["КП «Нахабино Кантри»", "дом"],
+        "company": "95 градусов",
+        "images": ["image_48", "image_24", "image_20", "image_24", "image_14", "image_20"],
+        "comment": 2,
+        "favourite": 134,
+        "price": 9000
+    },
+    {
+        "id": 15,
+        "description":["Сауна","4 м2","Tylo Compact"],
+        "location": ["Москва", "квартира"],
+        "company": "95 градусов",
+        "images": ["image_49"],
+        "comment": 0,
+        "favourite": 0,
+        "price": 3000
+    },
+    {
+        "id": 16,
+        "description":["SPA-зона","2000 м2","Klafs"],
+        "company": "ASPA",
+        "images": ["image_46"],
+        "comment": 2,
+        "favourite": 134,
+        "price": 130000
+    },
+    {
+        "id": 17,
+        "description":["Травяная сауна","34 м2","Lang Sauna-Therm"],
+        "location": ["Москва", "Termoland"],
+        "company": "Контакт Плюс",
+        "images": ["image_44", "image_24", "image_20", "image_24", "image_14", "image_20"],
+        "comment": 1,
+        "favourite": 256,
+        "price": 16000
+    },
+    {
+        "id": 18,
+        "description":["Гималайская сауна","65 м2","IKI Pro"],
+        "location": ["Москва", "Termoland"],
+        "company": "Контакт Плюс",
+        "images": ["image_43", "image_24", "image_20", "image_20"],
+        "comment": 0,
+        "favourite": 1,
+        "price": 30000
+    },
+    {
+        "id": 19,
+        "description":["Сауна","65 м2","Helo Saunatonttu","от 1 400 000 ₽"],
+        "location": ["Москва", "Termoland"],
+        "company": "Контакт Плюс",
+        "images": ["image_42", "image_24", "image_20", "image_24", "image_14", "image_20"],
+        "comment": 2,
+        "favourite": 134,
+        "price": 900000
+    },
+    {
+        "id": 20,
+        "description":["Нефритовая сауна","65 м2","IKI"],
+        "location": ["Москва", "Termoland"],
+        "company": "Контакт Плюс",
+        "images": ["image_41", "image_24", "image_14", "image_20"],
+        "comment": 0,
+        "favourite": 0,
+        "price": 40000
+    }
+]

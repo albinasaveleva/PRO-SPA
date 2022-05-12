@@ -1,0 +1,56 @@
+*,
+*::before,
+*::after
+    box-sizing: border-box
+a
+    text-decoration: none
+    color: inherit
+a,
+button
+    cursor: pointer
+button
+    outline: none
+ul
+    margin: 0
+    padding: 0
+li
+    list-style: none
+h1,
+h2,
+h3, 
+h4,
+h5,
+h6,
+p
+    margin: 0
+h1
+    display: none
+body
+    position: relative
+
+    background-color: #fff
+
+    font-family: "Gilroy", sans-serif
+    font-style: normal
+    color: black
+details
+    width: 100%
+summary
+    width: 100%
+    outline: none
+    &::marker
+        content: ""
+.body_status_scrolless
+    overflow-y: hidden
+.container
+    margin: 0 $Step_l
+.logo
+    @include Logo
+.button_type_outline_secondary
+    @include Button-Outline-Secondary
+    &:hover
+        @include Button-Outline-Secondary-Hover
+.button_type_outline_primary
+    @include Button-Outline-Primary
+    &:hover
+        @include Button-Outline-Primary-Hover

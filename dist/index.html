@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/normalize.css">
+    <link rel="stylesheet" href="../src/style.css">
+    <title>PRO SPA</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="#" class="logo header__logo">
+                    PRO SPA
+                </a>
+                <nav class="nav header__nav">
+                    <ul class="nav-list header__nav-list" id="header__nav-list">
+                        <li class="nav-item header__nav-item nav-item_status_active">
+                            <a href="#" class="nav-item-link">
+                                Сауны
+                            </a>
+                        </li>
+                        <li class="nav-item header__nav-item">
+                            <a href="#" class="nav-item-link">
+                                Бани
+                            </a>
+                        </li>
+                        <li class="nav-item header__nav-item">
+                            <a href="#" class="nav-item-link">
+                                Хаммамы
+                            </a>
+                        </li>
+                        <li class="nav-item header__nav-item">
+                            <a href="#" class="nav-item-link">
+                                Бассейны
+                            </a>
+                        </li>
+                        <li class="nav-item header__nav-item">
+                            <a href="#" class="nav-item-link">
+                                SPA-комплексы
+                            </a>
+                        </li>
+                        <li class="nav-item header__nav-item">
+                            <a href="#" class="nav-item-link">
+                                Камины
+                            </a>
+                        </li>
+                        <li class="nav-item header__nav-item header__nav-item_type_select nav-item_type_select nav-item_status_inactive" id="header__nav-item_type_select">
+                            Еще
+                            <ul></ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="mobile-nav" id="mobile-nav">
+                    <ul class="mobile-nav-list">
+                        <li class="nav-item">
+                            <a href="#" class="nav-item-link">Сауны</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-item-link">Бани</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-item-link">Хаммамы</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-item-link">Бассейны</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-item-link">SPA-комплексы</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-item-link">Камины</a>
+                        </li>
+                        <li class="nav-item nav-item_status_inactive">
+                            <a href="#" class="nav-item-link">Еще разделы</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header__buttons">
+                    <div class="header__icon-wrapper">
+                        <button class="header__icon" id="notification-icon"></button>
+                        <div class="hint">Уведомления</div>
+                        <div class="header__icon-count header__icon-count_status_active">2</div>
+                    </div>
+                    <div class="header__icon-wrapper">
+                        <button class="header__icon" id="favourite-icon"></button>
+                        <div class="hint">Избранное</div>
+                        <div class="header__icon-count">35</div>
+                    </div>
+                    <button class="button header__button button_type_outline_primary" id="order-button">
+                        Заказать проект
+                    </button>
+                    <button class="button header__button button_type_outline_secondary" id="entry-button">
+                        Войти
+                    </button>
+                    <button class="mobile-nav-button" id="mobile-nav-button"></button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <h1>PRO SPA</h1>
+        <div class="container">
+            <div class="main__inner">
+                <div class="breadcrum">
+                    <span class="breadcrum-item">Строительство</span>
+                    <span class="breadcrum-item">Сауна</span>
+                </div>
+                <div class="title-block">
+                    <h2 class="title">Строительство саун</h2>
+                    <span class="count">165</span>
+                </div>
+                <div class="tags">
+                    <div class="tag">Для квартиры</div>
+                    <div class="tag">Для дачи</div>
+                    <div class="tag">Для бизнеса</div>
+                    <div class="tag">Дизайнерские</div>
+                    <div class="tag">Недорогие</div>
+                    <div class="tag">до 40 м2</div>
+                </div>
+                <div class="settings-block">
+                    <div class="settings settings_type_desktop" id="settings_type_desktop">
+                        <div class="sorter" id="settings__sorter_type_desktop">
+                            <button class="sorter-button" data-sort="favourite">Сначала популярные</button>
+                            <button class="sorter-button" data-sort="new">Новизна</button>
+                            <button class="sorter-button" data-sort="price">Цена</button>
+                        </div>
+                        <button class="filter-button" id="filter-button_type_desktop">Показать фильтр</button>
+                    </div>
+                    <div class="settings settings_type_mobile" id="settings_type_mobile">
+                        <div class="sorter" id="settings__sorter_type_mobile">
+                            <button class="sorter-button" id="settings__sorter-button_type_mobile" data-sort="new">Сначала новые</button>
+                            <div class="sorter-modal" id="sorter-modal">
+                                <div class="sorter-modal__inner">
+                                    <ul class="sorter-list">
+                                        <li class="sorter-item sorter-item_status_active" data-sort="new">Новые</li>
+                                        <li class="sorter-item" data-sort="favourite">Популярные</li>
+                                        <li class="sorter-item" data-sort="price">Подешевле</li>
+                                        <li class="sorter-item" data-sort="price">Подороже</li>
+                                        <li class="sorter-item" data-sort="new">Большой объём</li>
+                                        <li class="sorter-item" data-sort="favourite">Меньший объём</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="filter-button" id="filter-button_type_mobile">Фильтр</button>
+                    </div>
+                </div>
+                <div class="layout">
+                    <div class="cards-wrapper">
+                        <div class="cards" id="cards"></div>
+                        <div class="pagination">
+                            <button class="pagination__page-more" id="pagination__page-more">Показать еще</button>
+                            <div class="pagination__pages" id="pagination">
+                                <div id="data-container"></div>
+                                <div id="pagination-container"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filters" id="filters">
+                        <form id="filters-form">
+                            <div class="filters__header">
+                                <span>Фильтр</span>
+                                <button class="filters-button-close" id="filters-button-close"></button>
+                            </div>
+                            <details class="filter" open data-filter-name="Компания" data-filter-type="value">
+                                <summary class="filter-title">
+                                    Компания
+                                    <span class="filter-title-count"></span>
+                                </summary>
+                                <!-- <input class="search-field" id="search-field" type="text" placeholder="Найти"> -->
+                                <div class="filter-items">
+                                    <div class="checkbox-field">
+                                        <label>
+                                            <input type="checkbox" data-filter="95 градусов">
+                                            <span class="pseudo-checkbox"></span>
+                                            95 градусов
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-field">
+                                        <label>
+                                            <input type="checkbox" data-filter="Контакт Плюс">
+                                            <span class="pseudo-checkbox"></span>
+                                            Контакт Плюс
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-field">
+                                        <label>
+                                            <input type="checkbox" data-filter="Твой пар">
+                                            <span class="pseudo-checkbox"></span>
+                                            Твой пар
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-field">
+                                        <label>
+                                            <input type="checkbox" data-filter="3D-сауна">
+                                            <span class="pseudo-checkbox"></span>
+                                            3D-сауна
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-field">
+                                        <label>
+                                            <input type="checkbox" data-filter="IKI">
+                                            <span class="pseudo-checkbox"></span>
+                                            IKI
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-field">
+                                        <label>
+                                            <input type="checkbox" data-filter="Sawo">
+                                            <span class="pseudo-checkbox"></span>
+                                            Sawo
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-field">
+                                        <label>
+                                            <input type="checkbox" data-filter="SSWW">
+                                            <span class="pseudo-checkbox"></span>
+                                            SSWW
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-field">
+                                        <label>
+                                            <input type="checkbox" data-filter="Твоя сауна">
+                                            <span class="pseudo-checkbox"></span>
+                                            Твоя сауна
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-field">
+                                        <label>
+                                            <input type="checkbox" data-filter="PPLLL">
+                                            <span class="pseudo-checkbox"></span>
+                                            PPLLL
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-field">
+                                        <label>
+                                            <input type="checkbox"  data-filter="SLSKC">
+                                            <span class="pseudo-checkbox"></span>
+                                            SLSKC
+                                        </label>
+                                    </div>
+                                </div>
+                                <button type="button" class="filter-items-more" id="filter-items-more">
+                                    Посмотреть все
+                                </button>
+                            </details>
+                            <details class="filter" open data-filter-name="Цена" data-filter-type="range">
+                                <summary class="filter-title">
+                                    Цена
+                                    <span class="filter-title-count"></span>
+                                </summary>
+                                <div class="checkbox-field">
+                                    <label>
+                                        <input type="checkbox" data-filter="менее 10000">
+                                        <span class="pseudo-checkbox"></span>
+                                        до 10 000 ₽
+                                    </label>
+                                </div>
+                                <div class="checkbox-field">
+                                    <label>
+                                        <input type="checkbox" data-filter="10000 – 30000">
+                                        <span class="pseudo-checkbox"></span>
+                                        10 000 – 30 000 ₽
+                                    </label>
+                                </div>
+                                <div class="checkbox-field">
+                                    <label>
+                                        <input type="checkbox" data-filter="30000 – 50000">
+                                        <span class="pseudo-checkbox"></span>
+                                        30 000 – 50 000 ₽
+                                    </label>
+                                </div>
+                                <div class="checkbox-field">
+                                    <label>
+                                        <input type="checkbox" data-filter="более 50000">
+                                        <span class="pseudo-checkbox"></span>
+                                        50 000 ₽ и более
+                                    </label>
+                                </div>
+                            </details>
+                            <details class="filter" open data-filter-name="Объем" data-filter-type="range">
+                                <summary class="filter-title">
+                                    Объем
+                                    <span class="filter-title-count"></span>
+                                </summary>
+                                <div class="checkbox-field">
+                                    <label>
+                                        <input type="checkbox" data-filter="до 20 кВт">
+                                        <span class="pseudo-checkbox"></span>
+                                        до 20 кВт
+                                    </label>
+                                </div>
+                                <div class="checkbox-field">
+                                    <label>
+                                        <input type="checkbox" data-filter="10–20 кВт">
+                                        <span class="pseudo-checkbox"></span>
+                                        10–20 кВт
+                                    </label>
+                                </div>
+                                <div class="checkbox-field checkbox-field_status_disabled">
+                                    <label>
+                                        <input type="checkbox" data-filter="20–30 кВт" disabled>
+                                        <span class="pseudo-checkbox"></span>
+                                        20–30 кВт
+                                    </label>
+                                </div>
+                                <div class="checkbox-field checkbox-field_status_disabled">
+                                    <label>
+                                        <input type="checkbox" data-filter="30 кВт и более" disabled>
+                                        <span class="pseudo-checkbox"></span>
+                                        30 кВт и более
+                                    </label>
+                                </div>
+                            </details>
+                            <details class="filter" data-filter-name="Объем парной" data-filter-type="value">
+                                <summary class="filter-title">
+                                    Объем парной
+                                    <span class="filter-title-count"></span>
+                                </summary>
+                                <div class="checkbox-field">
+                                    <label>
+                                        <input type="checkbox" data-filter="Объем парной 1">
+                                        <span class="pseudo-checkbox"></span>
+                                        Объем парной 1
+                                    </label>
+                                </div>
+                                <div class="checkbox-field">
+                                    <label>
+                                        <input type="checkbox" data-filter="Объем парной 2">
+                                        <span class="pseudo-checkbox"></span>
+                                        Объем парной 2
+                                    </label>
+                                </div>
+                                <div class="checkbox-field">
+                                    <label>
+                                        <input type="checkbox" data-filter="Объем парной 3">
+                                        <span class="pseudo-checkbox"></span>
+                                        Объем парной 3
+                                    </label>
+                                </div>
+                            </details>
+                            <div class="filter" data-filter-name="Парогенератор" data-filter-type="switch">
+                                <span class="filter-title">Парогенератор</span>
+                                <input class="switcher-field" data-filter="true" type="checkbox">
+                            </div>
+                            <details class="filter" data-filter-name="Управление" data-filter-type="value">
+                                <summary class="filter-title">
+                                    Управление
+                                    <span class="filter-title-count"></span>
+                                </summary>
+                                <div class="checkbox-field">
+                                    <label>
+                                        <input type="checkbox" data-filter="Управление 1">
+                                        <span class="pseudo-checkbox"></span>
+                                        Управление 1
+                                    </label>
+                                </div>
+                                <div class="checkbox-field">
+                                    <label>
+                                        <input type="checkbox"  data-filter="Управление 2">
+                                        <span class="pseudo-checkbox"></span>
+                                        Управление 2
+                                    </label>
+                                </div>
+                            </details>
+                            <details class="filter" data-filter-name="Установка" data-filter-type="value">
+                                <summary class="filter-title">
+                                    Установка
+                                    <span class="filter-title-count"></span>
+                                </summary>
+                                <div class="checkbox-field">
+                                    <label>
+                                        <input type="checkbox"  data-filter="Установка 1">
+                                        <span class="pseudo-checkbox"></span>
+                                        Установка 1
+                                    </label>
+                                </div>
+                                <div class="checkbox-field">
+                                    <label>
+                                        <input type="checkbox"  data-filter="Установка 2">
+                                        <span class="pseudo-checkbox"></span>
+                                        Установка 1
+                                    </label>
+                                </div>
+                            </details>
+                            <button class="filters-reset-button" type="reset" id="filters-reset-button">
+                                Очистить фильтр
+                            </button>
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+    <script src="bundle.js"></script>
+</body>
+</html>
